@@ -1,6 +1,23 @@
 import { useState } from 'react'
 
-const StatisticsLine = ({ text, value }) => { return (<p>{text} {value}</p>) }
+const StatisticsLine = ({ text, value }) => {
+  return (
+    <div>
+      <table>
+        <colgroup>
+          <col width={"80px"} />
+          <col width={"80px"} />
+        </colgroup>
+        <tbody>
+          <tr>
+            <td>{text}</td>
+            <td>{value}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  )
+}
 
 const Statistics = ({ good, neutral, bad }) => {
   if (good + neutral + bad > 0) {
